@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisterland — territorio creativo</title>
+    <meta name="description" content="Sisterland - territorio creativo. Estamos creando algo nuevo. Muy pronto.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4A4A4A;
+            background: #FFFFFF;
+            animation: bgBreath 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgBreath {
+            0% { background-color: #FFFFFF; }
+            100% { background-color: #FFF8F9; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 24px;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+
+        .logo img {
+            max-width: min(400px, 90vw);
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        .message {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-top: 2rem;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+        }
+
+        .submessage {
+            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+            font-weight: 300;
+            margin-top: 0.75rem;
+            line-height: 1.6;
+            color: #888;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.9s forwards;
+        }
+
+        .line-decoration {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, #E63B2E, #F4A0B0);
+            margin-top: 2.5rem;
+            border-radius: 1px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 1.1s forwards;
+        }
+
+        .contact {
+            margin-top: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 1.3s forwards;
+        }
+
+        .contact a {
+            color: #E63B2E;
+            text-decoration: none;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border-bottom: 1px solid #F4A0B0;
+            padding-bottom: 2px;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact a:hover {
+            border-color: #E63B2E;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 20px;
+            }
+
+            .logo img {
+                max-width: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="logo">
+            <img src="sisterland-logo.png" alt="Sisterland — territorio creativo">
+        </div>
+        <p class="message">Estamos creando algo nuevo.</p>
+        <p class="submessage">Muy pronto descubrirás nuestro territorio creativo.</p>
+        <div class="line-decoration"></div>
+        <div class="contact">
+            <a href="mailto:hola@sisterland.net">hola@sisterland.net</a>
+        </div>
+    </main>
+</body>
+</html>
